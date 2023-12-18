@@ -52,8 +52,9 @@ public class Field {
         );
 
         for (List<Integer> winPossibility : winPossibilities) {
-            if (field.get(winPossibility.get(0)) == field.get(winPossibility.get(1))
-                && field.get(winPossibility.get(0)) == field.get(winPossibility.get(2))) {
+            if (field.get(winPossibility.get(0)) != Sign.EMPTY
+                    && field.get(winPossibility.get(0)) == field.get(winPossibility.get(1))
+                    && field.get(winPossibility.get(0)) == field.get(winPossibility.get(2))) {
                 return field.get(winPossibility.get(0));
             }
         }
